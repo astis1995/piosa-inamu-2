@@ -1,0 +1,66 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        {% block css_style%}
+        <!-- Bootstrap core CSS {#% extends "base.html" %}-->
+
+        <link href= "{%static "css_mb/bootstrap.min.modified.css" %}" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href= "{%static "css_bg/modern-business.css" %}" rel="stylesheet" >
+        <link href= "{%static "css_menu/menu.css" %}" rel="stylesheet" >
+
+        {% endblock css_style%}
+
+        <style type="text/css">
+            .nav {
+                padding-left: 0;
+            }
+            .nav li {
+                display: inline;
+                list-style-type: none;
+                padding-right: 20px;
+            }
+            .container {
+                width: 940px;
+                margin: 0 auto
+            }
+            .content {
+                float: left;
+                width: 80%;
+            }
+            .sidebar {
+                float: left;
+                width: 20%;
+            }
+        </style>
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <div class="container modfont">
+
+                {% show_menu 0 0 1 2%}
+                {# show_sub_menu 1 None 1 "menu/submenu.html" #}
+                {# show_breadcrumb #}
+            {%block content %}{% endblock content %}
+        </div>
+
+      <footer>
+      {% static_placeholder 'footer' %}
+      </footer>
+
+      <script src="{% static "vendor/jquery/jquery.min.js"%}"></script>
+      <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js"%}"></script>
+      <script src="{% static "static_vendor/jquery/jquery.min.js"%}"></script>
+      <script src="{% static "static_vendor/bootstrap/js/bootstrap.bundle.min.js"%}"></script>
+      {% block js2%}
+      {% endblock js2%}
+      {% render_block "js" %}
+
+    </body>
+</html>

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+<br>
+<h1>
+{% placeholder "titulo" %}
+</h1>
+	<h2>
+{% placeholder "subtitulo" %}
+</h2>
+{% block filtro%}
+
+<form action="/busqueda" method="get">
+
+
+				 <h4>{% placeholder tituloBusqueda %}</h4>
+
+						 <div id="menu-outer2">
+						 <div class="table2">
+							 <ul id="horizontal-list1">
+								 <li id="izquierda-form">
+									 <h5>{% placeholder tituloCanton %}</h5>
+																 <select name="lugar">
+																	 <option value="todos">Todos</option>
+																	 {%for opcion in etiquetas_cantones %}
+																	 <option value="{{opcion.canton}}">{{opcion.canton}}</option>
+																	 {% endfor %}
+
+																	 </select>
+								 </li>
+
+								 <li id="derecha-form">
+									 <h5>{% placeholder tituloActividad %}</h5>
+									 <select name="actividad">
+										 <option value="todas">Todas</option>
+										 {%for opcion in etiquetas_actividad %}
+										 <option value="{{opcion.actividad}}">{{opcion.actividad}}</option>
+										 {% endfor %}
+										 </select>
+								 </li>
+								 	<li>
+								  <button type="submit">Buscar</button>
+									</li>
+								</ul>
+						 </div>
+
+ </form>
+
+
+{% endblock filtro%}
+
+
+		 {% block carousel %}
+		 {% endblock carousel %}
+
+     {% placeholder "content1" %}
+
+     {% placeholder "content2" %}
+
+     {% placeholder "content3" %}
+
+     {% placeholder "content4" %}
+
+     {% placeholder "content5" %}
+
+     {% placeholder "content6" %}
+
+     {% placeholder "content7" %}
+
+     {% placeholder "content8" %}
+
+     {% placeholder "splashbox" %}
+ {% endblock content %}

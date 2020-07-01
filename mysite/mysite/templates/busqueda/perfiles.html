@@ -1,0 +1,26 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles%}
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+<small>
+
+{{datos}}
+Hola hola
+
+{% for persona in personas %}
+<p>{{persona.nombre}}</p>
+<p>{{persona.canton}}</p>
+<p>{{persona.actividad}}</p>
+{% endfor %}
+
+</small>
+
+
+
+  </html>

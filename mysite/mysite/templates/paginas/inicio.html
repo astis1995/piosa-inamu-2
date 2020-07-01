@@ -1,0 +1,15 @@
+{% extends "../base.html" %}
+
+{% block filtro%}
+
+<form action="/busqueda" method= "post">
+  <input type="radio" id="Osa" name="lugar" value="Osa">
+  <label for="Osa">Osa</label><br>
+  <input type="radio" id="Golfito" name="lugar" value="Golfito">
+  <label for="Golfito">Golfito</label><br>
+  <input type="radio" id="other" name="lugar" value="other">
+  <label for="other">Other</label>
+
+<button type="submit">Seleccionar</button>
+</form>
+{% endblock filtro%}

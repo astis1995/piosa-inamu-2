@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+		<div style="margin-top: 25px">
+		<h1>
+     {% placeholder "titulo" %}
+		 </h1 >
+		 </div>
+		 <div>
+		 <h2>
+     {% placeholder "subtitulo" %}
+	 	</h2 >
+		</div>
+			<div>
+
+		 {% block carousel %}
+		 {% endblock carousel %}
+		 </div>
+
+		 <div>
+			  <p>
+     {% placeholder "content1" %}
+		  </p>
+	 </div>
+
+	<div>
+		 <p>
+     {% placeholder "content2" %}
+		  </p>
+	 </div>
+
+	 <div>
+     {% placeholder "content3" %}
+	 </div>
+
+	 <div>
+     {% placeholder "content4" %}
+	 </div>
+
+	 <div>
+     {% placeholder "content5" %}
+
+     {% placeholder "content6" %}
+
+     {% placeholder "content7" %}
+
+     {% placeholder "content8" %}
+
+     {% placeholder "splashbox" %}
+ {% endblock content %}

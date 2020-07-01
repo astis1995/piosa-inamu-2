@@ -1,0 +1,40 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles%}
+<html>
+
+<head>
+
+  <title> {% block title %}{% page_attribute "page_title" %}{% endblock title %} </title>
+
+  <!-- Bootstrap core CSS {#% extends "base.html" %}-->
+  <link href= "{%static "vendor/bootstrap/css/bootstrap.min.modified.css" %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href= "{%static "css/modern-business.css" %}" rel="stylesheet" >
+{% render_block "css" %}
+</head>
+
+<body>
+  {% cms_toolbar %}
+  <!-- Navigation -->
+  {% block content %}
+
+  {% placeholder "Title" %}
+
+  <small>
+    {% placeholder "subtitle" %}
+  </small>
+
+  <!-- Page Content -->
+  {% for persona in personas %}
+  <p>{{persona.nombre}}</p>
+  <p>{{persona.canton}}</p>
+  <p>{{persona.actividad}}</p>
+  {% endfor %}
+
+
+  {% endblock content %}
+
+
+
+
+  </html>
