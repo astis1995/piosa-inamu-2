@@ -103,6 +103,12 @@
   src: local('Proxima-Nova-Soft'),
        url('../../static/fonts/Proxima-Nova-Soft.ttf') format("truetype");
 }
+
+@font-face {
+ font-family: 'Fira Sans Extra Condensed Regular';
+ src: local('FiraSansExtraCondensed-Regular'),
+      url('../../static/fonts/FiraSansExtraCondensed-Regular.ttf') format("truetype");
+}
  /* Add a black background color to the top navigation */
  .col-lg-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%,display:inline-block}
 /*.{position:relative;width:100%;padding-right:15px;padding-left:15px;}*/
@@ -208,13 +214,15 @@ ul#horizontal-list2 {
 --cyber-grape: #67458Eff;
 --purple-mountain-majesty-2: #917FC0ff;
 --independence: #4e4c67ff;--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;text-align:left;background-color:#000000}[tabindex="-1"]:focus{outline:0!important}hr{box-sizing:content-box;height:0;overflow:visible}
-h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-sans-serif;}
+
+h1,h2{margin-top:0;margin-bottom:.5rem;font-family: 'Fira Sans Extra Condensed Regular', 'Helvetica Neue', sans-sans-serif;}
+h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-sans-serif;}
 
 p{margin-top:0;margin-bottom:1rem;font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-sans-serif;}
 abbr[data-original-title],abbr[title]{text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;border-bottom:0;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}
 address{margin-bottom:1rem;font-style:normal;line-height:inherit}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
 a{margin:15px;;color:white;text-decoration:none;background-color:transparent}
-a.big-font-menu{font-size:19px;font-family:  'Helvetica','Arial', sans-serif;}
+a.big-font-menu{font-size:19px;font-family:  'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif;}
 a.small-font-menu{font-size:20px;font-family:  'Helvetica','Arial', sans-serif;}
 a:hover{color:#0056b3;text-decoration:underline}a:not([href]):not([tabindex]){color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus{outline:0}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}
 

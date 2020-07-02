@@ -17,7 +17,9 @@ def Busqueda_view(request):
 
 def busqueda_persona(request):
     #Determinar lugar y Persona
-    HTML_TEMPLATE = "paginabusqueda.html"
+    HTML_TEMPLATE_INVITACION = "invitacion_busqueda.html" # invitacion_busqueda.html
+    HTML_TEMPLATE = "paginabusqueda.html" # invitacion_busqueda.html
+    HTML_TEMPLATE_404 = "404-carrusel.html" #
     SIN_LUGAR = 'Ningún lugar'
     SIN_ACTIVIDAD = 'Ninguna actividad'
 
@@ -31,24 +33,26 @@ def busqueda_persona(request):
 
     personas = ModeloPersonas.objects.all()
     if is_404(personas):
-        return render(request, '404-carrusel.html', { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
+        return render(request, HTML_TEMPLATE_404, { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
 
 
     nombre = "nombre_debug"
 
     if lugar == None and actividad == None:
-        return render(request, HTML_TEMPLATE, {'lugar':'sin lugar','personas':personas,'etiquetas_actividad':etiquetas_actividad, 'etiquetas_cantones': etiquetas_cantones})
+        return render(request, HTML_TEMPLATE_404, {'lugar':'sin lugar','personas':personas,'etiquetas_actividad':etiquetas_actividad, 'etiquetas_cantones': etiquetas_cantones})
 
 
 
     #Debe retornar siempre todos los cantones y todas las actividades productivas.
     #Si el lugar es todos.
+    if lugar == SIN_LUGAR and actividad == SIN_ACTIVIDAD: #Inicio
+        return render(request, HTML_TEMPLATE_INVITACION, { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
 
     if lugar.lower() == 'todos' and actividad.lower() == 'todas':
 
         personas = ModeloPersonas.objects.all()
         if is_404(personas):
-            return render(request, '404-carrusel.html', { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
+            return render(request, HTML_TEMPLATE_404, { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
 
         imagenes_primera = personas[0].imagen_emprendimiento
         imagenes_resto = personas[1:len(personas)]
@@ -64,7 +68,7 @@ def busqueda_persona(request):
     elif lugar.lower() == 'todos':
         personas = ModeloPersonas.objects.filter(actividad = actividad)
         if is_404(personas):
-            return render(request, '404-carrusel.html', { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
+            return render(request, HTML_TEMPLATE_404, { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
 
         imagenes_primera = personas[0].imagen_emprendimiento
         imagenes_resto = personas[1:len(personas)]
@@ -80,7 +84,7 @@ def busqueda_persona(request):
     elif actividad.lower() == 'todas':
         personas = ModeloPersonas.objects.filter(canton = lugar)
         if is_404(personas):
-            return render(request, '404-carrusel.html', { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
+            return render(request, HTML_TEMPLATE_404, { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
 
 
         imagenes_primera = personas[0].imagen_emprendimiento
@@ -97,7 +101,7 @@ def busqueda_persona(request):
     else:
         personas = ModeloPersonas.objects.filter(actividad = actividad).filter(canton = lugar)
         if is_404(personas):
-            return render(request, '404-carrusel.html', { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
+            return render(request, HTML_TEMPLATE_404, { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
         imagenes_primera = personas[0].imagen_emprendimiento
         imagenes_resto = personas[1:len(personas)]
         nombre = personas[0].nombre
