@@ -26,9 +26,16 @@
 									 				 <div class="custom-selectx" style="width:200px;">
 																 <select name="lugar" >
 																	 <option value="todos">Todos</option>
+																	 <option value="Golfito">Golfito</option>
+																		<option value="Osa">Osa</option>
+																		<option value="Corredores">Corredores</option>
+																		<option value="Pérez Zeledón">Pérez Zeledón</option>
+																		<option value="Coto Brus">Coto Brus</option>
+																	 {% comment %}
 																	 {%for opcion in etiquetas_cantones %}
 																	 <option value="{{opcion.canton}}">{{opcion.canton}}</option>
 																	 {% endfor %}
+																	{% endcomment %}
 
 																	 </select>
 													 </div >
@@ -39,14 +46,24 @@
 									 	   	<div class="custom-selectx" style="width:200px;">
 																 <select name="actividad" >
 																	 <option value="todas">Todas</option>
+																	 <option value="agroindustria">Agroindustria</option>
+																	 <option value="agropecuaria">Agropecuaria</option>
+																	 <option value="turismo">Turismo</option>
+																	 <option value="artesania">Artesanía</option>
+
+																	 {% comment %}
 																	 {%for opcion in etiquetas_actividad %}
 																	 <option value="{{opcion.actividad}}">{{opcion.actividad}}</option>
 																	 {% endfor %}
+																	 {% endcomment %}
 																	 </select>
-												</div>
+													</div >
 								 </li>
 								 	<li>
-								  <button type="submit">Buscar</button>
+										<br>
+										<br>
+									
+								  <button class=boton type="submit">Buscar</button>
 									</li>
 								</ul>
 						 </div>
@@ -54,7 +71,8 @@
  </form>
 
 
-{% endblock filtro%}
+		{% endblock filtro%}
+
 
 
 		 {% block carousel %}

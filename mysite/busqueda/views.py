@@ -44,7 +44,7 @@ def busqueda_persona(request):
     #Debe retornar siempre todos los cantones y todas las actividades productivas.
     #Si el lugar es todos.
 
-    if lugar == 'todos' and actividad == 'todas':
+    if lugar.lower() == 'todos' and actividad.lower() == 'todas':
 
         personas = ModeloPersonas.objects.all()
         if is_404(personas):
@@ -61,7 +61,7 @@ def busqueda_persona(request):
             vector.append(i)
         return render(request, HTML_TEMPLATE, {'personas':personas,'datos': datos,'nombre':nombre ,'ruta':ruta,'imagenesprimera': imagenes_primera,'imagenesresto': imagenes_resto, 'num': num, 'vector': vector, 'etiquetas_actividad':etiquetas_actividad, 'etiquetas_cantones': etiquetas_cantones})
 
-    elif lugar == 'todos':
+    elif lugar.lower() == 'todos':
         personas = ModeloPersonas.objects.filter(actividad = actividad)
         if is_404(personas):
             return render(request, '404-carrusel.html', { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
@@ -77,7 +77,7 @@ def busqueda_persona(request):
             vector.append(i)
         return render(request, HTML_TEMPLATE, {'personas':personas,'datos': datos,'nombre':nombre ,'ruta':ruta,'imagenesprimera': imagenes_primera,'imagenesresto': imagenes_resto, 'num': num, 'vector': vector,'etiquetas_actividad':etiquetas_actividad, 'etiquetas_cantones': etiquetas_cantones})
 
-    elif actividad == 'todas':
+    elif actividad.lower() == 'todas':
         personas = ModeloPersonas.objects.filter(canton = lugar)
         if is_404(personas):
             return render(request, '404-carrusel.html', { 'etiquetas_actividad': etiquetas_actividad, 'etiquetas_cantones':etiquetas_cantones})
