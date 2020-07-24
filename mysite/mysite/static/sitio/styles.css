@@ -547,26 +547,26 @@ option :checked{
   /* tres  perfiles                                                                 */
   /*********************************************************************************/
 
-  #tres-perfiles
+  #perfiles
   {
     overflow: hidden;
     padding: 4em 0em;
   }
 
-  #tres-perfiles .titulo-perfil
+  #perfiles .titulo-perfil
   {
     margin-bottom: 2em !important;
     text-align: left !important;
   }
 
-  #tres-perfiles .titulo-perfil h2
+  #perfiles .titulo-perfil h2
   {
     display: block;
     margin: 1em 0em 0em 0em;
     font-size: 1.5em;
   }
 
-  #tres-perfiles .titulo-perfil .subtitulo-perfil
+  #perfiles .titulo-perfil .subtitulo-perfil
   {
     display: block;
     padding-top: 0.30em;
@@ -574,7 +574,7 @@ option :checked{
     text-transform: uppercase;
   }
 
-  #tres-perfiles .icon
+  #perfiles .icon
   {
     position: relative;
     display: block;
@@ -591,43 +591,43 @@ option :checked{
 
   }
 
-  #tres-perfiles #perfil1,
-  #tres-perfiles #perfil2
+  #perfiles #perfil1,
+  #perfiles #perfil2
   {
     float: left;
     width: 30%;
     height: 700px;
   }
 
-  #tres-perfiles #perfil1
+  #perfiles #perfil1
   {
     margin-right: 5%;
   }
 
-  #tres-perfiles #perfil3
+  #perfiles #perfil3
   {
     float: right;
     width: 30%;
   }
 
-  #tres-perfiles .titulo-perfil
+  #perfiles .titulo-perfil
   {
     text-align: center;
   }
 
-  #tres-perfiles .titulo-perfil h2
+  #perfiles .titulo-perfil h2
   {
     font-size: 1.60em;
   }
 
-  #tres-perfiles .titulo-perfil .subtitulo-perfil
+  #perfiles .titulo-perfil .subtitulo-perfil
   {
     padding-top: 0.50em;
     font-size: 0.90em;
     color: #858585;
   }
 
-  #tres-perfiles .arrow-down
+  #perfiles .arrow-down
   {
     border-top-color: #292929;
   }
@@ -635,7 +635,7 @@ option :checked{
   width: 95%;
   height: 300px;
   }
-  #tres-perfiles p.descripcion-perfil
+  #perfiles p.descripcion-perfil
 	{
     height: 5rem;
 		 color = var(--gris-claro-texto);

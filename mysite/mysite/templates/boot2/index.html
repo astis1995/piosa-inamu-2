@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load cms_tags menu_tags static sekizai_tags  %}
-<!-- Pagina sin perfiles busqueda boot2-->
+<!-- Pagina contáctenos-->
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -19,7 +19,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href= "{%static "boot2/css/styles.css" %}" rel="stylesheet">
+        <link href= "{%static "sboot2/css/styles.css" %}" rel="stylesheet">
         <!-- Colores y Estilos particulares del sitio-->
         <link href= "{%static "sitio/styles.css" %}" rel="stylesheet">
         <link href= "{% static "css_menu/menu.css" %}"  rel="stylesheet" type="text/css" media="all" />
@@ -31,7 +31,7 @@
 
         <!-- Navigation-->
 
-        {% show_menu 0 0 1 2 "menu/boot2/menu2.html" %}
+        {% show_menu 0 0 1 2 "menu/boot2/menu1.html" %}
         {# show_sub_menu 1 None 1 "menu/submenu.html" #}
         {# show_breadcrumb #}
 
@@ -40,7 +40,8 @@
         <!-- Masthead-->
 
         {% block content %}
-        <header class="masthead bg-primary text-white text-center">
+        <div class="contenido">
+        <header class="masthead bg-primary text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="" />
@@ -455,6 +456,8 @@
                 </div>
             </div>
         </div>
+
+      </div><!--fin clase contenido-->
         {% endblock content %}
 
         <!-- Bootstrap core JS-->
