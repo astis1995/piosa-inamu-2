@@ -92,22 +92,15 @@ src: local('SourceSansPro-Regular'),
 }
 
 /*ESTILO DEL CONTENIDO DE LA PAGINA*/
-footer * strong {
-  font-weight: 900;
-}
+
+
 .contenido h1 {
   font-size: 2.8rem ;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 .contenido h2 {
   font-size: 2.3rem ;
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 .contenido h3 {
   font-size: 1.9rem ;
@@ -172,11 +165,21 @@ footer * strong {
   background-color: #1abc9c; /* Para que funcione el toolbar, no cambiar*/
 }
 
-.title-container{
-  margin-top: 3rem;
+.title-container, .logo{
+  margin-top: 6rem;
   margin-bottom: 1rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
+}
+.title-container{
+  float: right;
+  margin-right: 1rem;
+  width: 75%;
+}
+.logo
+{
+  float: left;
+  width: 15%;
+  line-height: 1rem;
+  margin-left: 6rem;
 }
 
 a :not(cms-toolbar) :hover {
@@ -643,6 +646,9 @@ option :checked{
 
 
 /*ESTILO DEL FOOTER*/
+footer * strong {
+  font-weight: 900;
+}
 .footer-profile-wrapper
 {
   overflow: hidden;

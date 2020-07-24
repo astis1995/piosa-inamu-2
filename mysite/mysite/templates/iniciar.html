@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load cms_tags menu_tags static sekizai_tags  %}
+<!-- Pagina contáctenos-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{% block title %}{% page_attribute "page_title" %}{% endblock title %}</title>
+        <!-- Favicon-->
+
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version) anima la parte superior-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href= "{%static "sboot2/css/styles.css" %}" rel="stylesheet">
+        <!-- Colores y Estilos particulares del sitio-->
+        <link href= "{%static "sitio/styles.css" %}" rel="stylesheet">
+        <link href= "{% static "css_menu/menu.css" %}"  rel="stylesheet" type="text/css" media="all" />
+
+        {% render_block "css" %}
+    </head>
+    <body id="page-top">
+        {% cms_toolbar %}
+
+        <!-- Navigation-->
+
+
+
+        {% block content %}
+        <br>
+        <br>
+        <br>
+
+        <h1> <a class= "nav-link px-0 px-lg-3 rounded js-scroll-trigger big-font-menu" style="font-size: 3rem" href="/inicio/">Haga click aquí para ir a la página de pruebas</a>  </h1>
+        {% endblock content %}
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="{% static "vendor/jquery/jquery.min.js"%}"></script>
+        <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js"%}"></script>
+        <script src="{% static "static_vendor/jquery/jquery.min.js"%}"></script>
+        <script src="{% static "static_vendor/bootstrap/js/bootstrap.bundle.min.js"%}"></script>
+        {% render_block "js" %}
+    </body>
+</html>
