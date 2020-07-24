@@ -1,0 +1,20 @@
+Este programa hace lo siguiente:
+
+- Solicita los datos de las personas:
+
+  -Nombre.
+  -Nombre del emprendimiento.
+  -Imagen de la persona.
+  -Descripción del emprendimiento
+
+- Luego crea una vista con esta información
+- Actualiza la página con todos los perfiles
+por filas y columnas
+
+
+TODO:
+
+-Crear el handler de urls.
+-Crear la vista de perfiles
+  -Crear una matriz de diccionarios
+  -Dentro de cada diccionario va la persona y columna

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags menu_tags sekizai_tags staticfiles static%}
+{% load cms_tags menu_tags sekizai_tags  static%}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
@@ -11,7 +11,7 @@
 
 {% block filtro%}
 
-<form action="/busqueda" method="get">
+<form action="#" method="get">
 
 
 				 <h4>{% placeholder tituloBusqueda %}</h4>

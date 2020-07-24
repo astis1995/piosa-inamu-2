@@ -17,8 +17,9 @@ def Busqueda_view(request):
 
 def busqueda_persona(request):
     #Determinar lugar y Persona
-    HTML_TEMPLATE_INVITACION = "invitacion_busqueda.html" # invitacion_busqueda.html
-    HTML_TEMPLATE = "paginabusqueda.html" # invitacion_busqueda.html
+    HTML_TEMPLATE_INVITACION = "boot2/invitacion_busqueda.html" # invitacion_busqueda.html
+    HTML_TEMPLATE = "boot2/paginabusqueda.html" # invitacion_busqueda.html
+    #HTML_TEMPLATE = "paginabusqueda.html" # invitacion_busqueda.html
     HTML_TEMPLATE_404 = "404-carrusel.html" #
     SIN_LUGAR = 'Ningún lugar'
     SIN_ACTIVIDAD = 'Ninguna actividad'

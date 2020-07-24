@@ -23,7 +23,8 @@ urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),  # NOQA
     #url(r'^polls/', include('polls.urls', namespace="polls")), #se quita por el apphook
     #url('en/', include('busqueda.urls')),
-    url(r'^busqueda/', include('busqueda.urls')),
+    #url(r'^busqueda/', include('busqueda.urls')),
+    url('', include('perfiles.urls'), name = "perfiles"),
     #url(r'', views.home_view, name = 'home' ),
     url(r'^', include('cms.urls')),
 )

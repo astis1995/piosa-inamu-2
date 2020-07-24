@@ -1,0 +1,65 @@
+{% load cms_tags menu_tags sekizai_tags static %}
+{% block perfiles%}
+<div class="profile-wrapper">
+
+{% for fila in matrizperfiles %}
+	<div id="tres-perfiles" class="container">
+	<div><span class="arrow-down"></span></div>
+
+	{% for dict in fila %}
+
+		{% if dict.columna == 0 %}
+			<div id="perfil1">
+				<div class="titulo-perfil">
+					<img class="imagen-perfil" src="{{dict.persona.imagen_emprendimiento}}" alt="foto-perfil" width="500" height="600">
+
+					<h2>{{dict.persona.nombre}}</h2>
+
+					<span class="subtitulo-perfil"> {{dict.persona.nombre_emprendimiento}} </span>
+
+				</div>
+
+				<p class="descripcion-perfil">{{dict.persona.descripcion}}</p>
+				<a href="{{dict.persona.link}}" class="button">Ver más</a>
+			</div>
+
+		{% elif dict.columna == 1 %}
+
+		<div id="perfil2">
+			<div class="titulo-perfil">
+				<img class="imagen-perfil" src="{{dict.persona.imagen_emprendimiento}}" alt="foto-perfil" width="500" height="600">
+
+				<h2>{{dict.persona.nombre}}</h2>
+
+				<span class="subtitulo-perfil"> {{dict.persona.nombre_emprendimiento}} </span>
+
+			</div>
+
+			<p class="descripcion-perfil">{{dict.persona.descripcion}}</p>
+			<a href="{{dict.persona.link}}" class="button">Ver más</a>
+		</div>
+		{% elif dict.columna == 2 %}
+		<div id="perfil3">
+			<div class="titulo-perfil">
+				<img class="imagen-perfil" src="{{dict.persona.imagen_emprendimiento}}" alt="foto-perfil" width="500" height="600">
+
+				<h2>{{dict.persona.nombre}}</h2>
+
+				<span class="subtitulo-perfil"> {{dict.persona.nombre_emprendimiento}} </span>
+
+			</div>
+
+			<p class="descripcion-perfil">{{dict.persona.descripcion}}</p>
+			<a href="{{dict.persona.link}}" class="button">Ver más</a>
+		</div>
+		{% endif %}
+		<!fin de la fila>
+	</div>
+
+	{% endfor %}
+
+<!fin de la tabla>
+
+{% endfor %}
+</div>
+{% endblock perfiles%}

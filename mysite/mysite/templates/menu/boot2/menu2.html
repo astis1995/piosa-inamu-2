@@ -1,0 +1,32 @@
+{% load menu_tags cms_tags static %}
+<nav class="navbar menu navbar-expand-lg bg-secondary text-uppercase topnav " id="mainNav"> <! fixed-top>
+    <div class="container">
+
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <Menu >
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto modfont">
+
+
+            {% for child in children %}
+            <li class="child{% if child.selected %} selected{% endif %}{% if child.ancestor %} ancestor{% endif %}{% if child.sibling %} sibling{% endif %}{% if child.descendant %} descendant{% endif %} nav-item mx-0 mx-lg-1">
+    	         <a class= "nav-link px-0 px-lg-3 rounded js-scroll-trigger big-font-menu" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+    	          {% if child.children %}
+    	           <ul>
+    		             {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+    	           </ul>
+    	          {% endif %}
+            </li>
+         {% endfor %}
+
+                <li class="nav-item mx-0 mx-lg-1"><a class="big-font-menu nav-link  px-0 px-lg-3 rounded js-scroll-trigger" href="#sobrenosotros">Sobre Nosotros</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="big-font-menu nav-link  px-0 px-lg-3 rounded js-scroll-trigger" href="#tres-perfiles">Perfiles</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="big-font-menu nav-link  px-0 px-lg-3 rounded js-scroll-trigger" href="#contacto">Contacto</a></li
+
+        </ul>
+        </div>
+    </div>
+</nav>

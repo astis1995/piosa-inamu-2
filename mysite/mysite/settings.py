@@ -28,7 +28,7 @@ SECRET_KEY = 'i&n^l*h+$6$h#5-!wx3mvrgyu3y=+kc72(cdvoap(lr03xwyb!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['estebanvsotom.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['estebanvsotom.pythonanywhere.com','127.0.0.1', '192.168.0.6']
 
 
 # Application definition
@@ -114,12 +114,12 @@ TEMPLATES = [
                 'sekizai.context_processors.sekizai',
                 'django.template.context_processors.static',
                 'cms.context_processors.cms_settings',
-                'aldryn_boilerplates.context_processors.boilerplate',
+
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
                 'django.template.loaders.app_directories.Loader',
-                'aldryn_boilerplates.template_loaders.AppDirectoriesLoader',
+
             ],
         },
     },
@@ -182,14 +182,13 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_video',
     'mysite',
-    'polls',
-    'polls_cms_integration',
     'parler',
     'sortedm2m',
     'taggit',
     'personas',
     'busqueda',
-
+    'carrusel',
+    'perfiles',
 ]
 
 
@@ -225,6 +224,9 @@ CMS_TEMPLATES = (
     ('paginabusqueda.html', 'Busqueda'),
     ('contactenos.html', 'Contáctenos'),
     ('home.html', 'Inicio'),
+    ('boot2/index.html', 'PruebaHomepage'),
+    ('boot2/paginabusqueda.html', 'boot2'),
+    ('temp_pic/index.html', 'temp_pic'),
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -254,7 +256,5 @@ THUMBNAIL_PROCESSORS = (
 
 STATICFILES_FINDERS = [
      'django.contrib.staticfiles.finders.FileSystemFinder',
-     'aldryn_boilerplates.staticfile_finders.AppDirectoriesFinder',
      'django.contrib.staticfiles.finders.AppDirectoriesFinder',
  ]
-ALDRYN_BOILERPLATE_NAME='bootstrap3'

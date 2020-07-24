@@ -1,0 +1,724 @@
+/*Aqui  van elementos particulares del sitio web
+Colores, tipos de letra, tamaños, todas aquellas cosas
+que se deban cambiar constantemente
+
+
+45062e  Fondo oscuro
+7f055f- Letra oscura
+e5a4cb- Letras claras
+ebd2be  Fondo Claro
+ffe8d4  Fondo Claro2
+*/
+body {
+  font-family: "Arial", "sans-serif"; /*debug*/
+  margin: 0 ;
+  background-color: #ebd2be !important;
+  padding:auto;
+}
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #1abc9c;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+
+  --primary: #45062e !important;
+  --secondary: #ebd2be !important;
+  --tertiary: #1abc9c  !important;
+  --c-letra-claro: #e5a4cb !important;
+  --c-letra-oscuro: #7f055f !important;
+  --c-fondo-oscuro: #45062e  !important;
+  --c-fondo-claro: #ebd2be  !important;
+  --lila-claro: #8d6daa !important;
+  --morado-oscuro: #7f055f !important;
+  --vino: #45062e !important;
+  --gris-claro: #858585 !important;
+
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+@font-face {
+ font-family: 'Proxima Nova Soft';
+ src: local('Proxima-Nova-Soft'),
+      url('../../static/fonts/Proxima-Nova-Soft.ttf') format("truetype");
+}
+@font-face {
+ font-family: 'Montserrat-SemiBold';
+ src: local('Montserrat-SemiBold'),
+      url('../../static/fonts/Montserrat-SemiBold.ttf') format("truetype");
+}
+@font-face {
+ font-family: 'Montserrat-Regular';
+ src: local('Montserrat-Regular'),
+      url('../../static/fonts/Montserrat-Regular.ttf') format("truetype");
+}
+
+@font-face {
+font-family: 'Fira Sans Extra Condensed Regular';
+src: local('FiraSansExtraCondensed-Regular'),
+     url('../../static/fonts/FiraSansExtraCondensed-Regular.ttf') format("truetype");
+}
+
+@font-face {
+font-family: 'Source Sans Pro';
+src: local('SourceSansPro-Regular'),
+     url('../../static/fonts/SourceSansPro-SemiBold.ttf') format("truetype");
+}
+
+
+
+#header-wrapper {
+    overflow: hidden;
+    padding: 0em 0em 0em 0em ;
+}
+
+/*ESTILO DEL CONTENIDO DE LA PAGINA*/
+footer * strong {
+  font-weight: 900;
+}
+.contenido h1 {
+  font-size: 2.8rem ;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.contenido h2 {
+  font-size: 2.3rem ;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.contenido h3 {
+  font-size: 1.9rem ;
+}
+.contenido h4 {
+  font-size: 1.4rem ;
+}
+.contenido h5 {
+  font-size: 1.2rem !important;
+}
+.contenido h6 {
+  font-size: 1rem !important;
+}
+
+.contenido select {
+  font-size: 1.4rem !important;
+  background-color: #ffe8d4;
+  color: #45062e;
+}
+
+.contenido select :hover {
+  font-size: 1.4rem !important;
+  background-color: #7f055f;
+  color: #e5a4cb;
+}
+.contenido button {
+  font-size: 1.4rem  !important;
+  background-color: #7f055f;
+  color: #e5a4cb;
+}
+
+.contenido h1, h2
+{
+  /*font-family:  'Source Sans Pro', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;*/
+  font-family:  'Montserrat-Regular', 'sans-serif' ;
+  color: var(--c-letra-oscuro) ;
+  font-weight: 100 !important;
+}
+.contenido h3, h4, h5, h6,
+{
+  font-family:  'Montserrat-Regular', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
+  color: #45062e !important;
+}
+
+.contenido div{
+  font-family:  'Montserrat-Regular', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
+  color: var(--morado-oscuro);
+  line-height: 1.9;
+}
+#copyright p
+{
+  letter-spacing: 1px;
+  font-size: 0.90em;
+  color: var(--vino)
+}
+.contenido h2 > span {
+  font-family:  'Montserrat-Regular', 'sans-serif' !important;
+  color: var(--c-letra-oscuro) !important ;
+}
+
+ li.cms-toolbar-item a:hover{
+  background-color: #1abc9c; /* Para que funcione el toolbar, no cambiar*/
+}
+
+.title-container{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+a :not(cms-toolbar) :hover {
+  color: #7f055f !important;
+  text-decoration: underline;
+  background-color: #ffe8d4;
+}
+ul.modfont li a {
+  font-family:   'Montserrat-Regular', 'Source Sans Pro', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
+  color: var(--c-letra-claro);
+}
+
+ul.modfont li a:hover {
+  color: var(--gris-claro) !important;
+  background-color: var(--c-letra-oscuro);
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+.bg-primary {
+  background-color: #ebd2be !important ;
+}
+.bg-secondary {
+  background-color: var(--morado-oscuro) !important;
+}
+.divider-custom .divider-custom-icon {
+  background-color:: #45062e !important;
+}
+.divider-custom.divider-light .divider-custom-line {
+  background-color:: #45062e !important;
+}
+.divider-custom.divider-light .divider-custom-icon {
+  color: #45062e !important;
+}
+}
+.divider-custom .divider-custom-icon {
+  color: #45062e !important;
+  font-size: 2rem;
+}
+
+.bg-secondary {
+  background-color: #7f055f ;
+}
+
+
+/*codigo para los botones*/
+
+/* ### ### ### 09 */
+
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -50px;
+    width: 100px;
+    height: 45px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.button_base:hover {
+    cursor: pointer;
+}
+
+.b09_electric {
+    background-color: var(--c-fondo-claro) ;
+    color:  var(--c-letra-oscuro);
+    border: #000000 solid 1px;
+    padding: 10px;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+.b09_electric:hover {
+    background-color: var(--c-fondo-oscuro) ;
+    color:  var(--c-letra-claro);
+    animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    transition: all 0.2s ease 0.2s;
+    -webkit-transition: all 0.2s ease 0.2s;
+    -moz-transition: all 0.2s ease 0.2s;
+}
+
+@-webkit-keyframes b09_electric_blinkIn {
+    from,
+    to {
+        background-color: #f8f8f8;
+        color: #080808;
+    }
+    50% {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+@-moz-keyframes b09_electric_blinkIn {
+    from,
+    to {
+        background-color: #f8f8f8;
+        color: #080808;
+    }
+    50% {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+p.fuente-boton {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+
+	.container
+	{
+		margin: 0px auto;
+		width: 1200px;
+	}
+
+/*CSS SELECT ##########################################################*/
+/* The container must be positioned relative: */
+select {
+  width: 60% !important;
+  background-color: var(--c-fondo-oscuro) !important;
+  color:  var(--c-letra-claro) !important;
+  border-color: var(--c-fondo-claro) !important;
+}
+
+option :hover{
+  background-color: var(--c-fondo-oscuro) !important;
+  color:  var(--c-letra-claro) !important;
+}
+option :checked{
+  background-color: var(--c-fondo-oscuro) !important;
+  color:  var(--c-letra-claro) !important;
+}
+.custom-select {
+
+  position: relative;
+  font-family: Helvetica;
+}
+
+.custom-select select {
+
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: var(--c-fondo-oscuro) ;
+  color:  var(--c-letra-claro);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  background-color: var(--c-fondo-oscuro) ;
+  color:  var(--c-letra-claro);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: var(--c-fondo-oscuro) ;
+  color:  var(--c-letra-claro);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+
+	.wrapper
+	{
+		overflow: hidden;
+		padding: 0em 0em 5em 0em;
+		background: #FFF;
+	}
+
+	#wrapper1
+	{
+		background: #FFF;
+	}
+
+	#wrapper2
+	{
+		overflow: hidden;
+		background: #F3F3F3;
+		padding: 5em 0em;
+	}
+
+	#wrapper3
+	{
+	}
+
+	#wrapper4
+	{
+	}
+/*********************************************************************************/
+/* Three Columns                                                                 */
+/*********************************************************************************/
+
+	#three-column
+	{
+		overflow: hidden;
+		padding: 0em 0em;
+    height: 300px;
+	}
+
+	#three-column .title
+	{
+		margin-bottom: 0em;
+		text-align: left !important;
+	}
+
+	#three-column .title h2
+	{
+		display: block;
+		margin: 1em 0em 0em 0em;
+	}
+
+	#three-column .title .byline
+	{
+		display: block;
+		padding-top: 0.30em;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	#three-column .icon
+	{
+		position: relative;
+		display: block;
+		margin: 0px auto 0.80em auto;
+		background: none;
+		line-height: 150px;
+		font-size: 4em;
+		width: 150px;
+		height: 150px;
+		border-radius: 100px;
+		border: 6px solid #67128F;
+		text-align: center;
+		color: #FFF;
+
+	}
+
+	#three-column #tbox1,
+	#three-column #tbox2
+	{
+		float: left;
+		width: 40%;
+    height: 100px;
+    line-height: 1rem;
+	}
+
+	#three-column #tbox1
+	{
+		margin-right: 30px;
+	}
+
+	#three-column #tbox3
+	{
+		float: right;
+		width: 5%;
+	}
+
+	#three-column .title
+	{
+		text-align: center;
+	}
+
+	#three-column .title h2
+	{
+    margin-bottom: 1rem;
+	}
+
+	#three-column .title .byline
+	{
+		padding-top: 0.50em;
+		font-size: 0.90em;
+		color: #858585;
+	}
+
+	#three-column .arrow-down
+	{
+		border-top-color: #292929;
+	}
+
+
+  /*********************************************************************************/
+  /* profile-wrapper                                                                       */
+  /*********************************************************************************/
+
+
+  	.profile-wrapper
+  	{
+  		overflow: hidden;
+  		padding: 0em 0em 5em 0em;
+      margin-top: 2rem;
+  		background: #FFF;
+  	}
+
+  	#wrapper1
+  	{
+  		background: #FFF;
+  	}
+
+  	#wrapper2
+  	{
+  		overflow: hidden;
+  		background: #F3F3F3;
+  		padding: 5em 0em;
+  	}
+
+  	#wrapper3
+  	{
+  	}
+
+  	#wrapper4
+  	{
+  	}
+  /*********************************************************************************/
+  /* tres  perfiles                                                                 */
+  /*********************************************************************************/
+
+  #tres-perfiles
+  {
+    overflow: hidden;
+    padding: 4em 0em;
+  }
+
+  #tres-perfiles .titulo-perfil
+  {
+    margin-bottom: 2em !important;
+    text-align: left !important;
+  }
+
+  #tres-perfiles .titulo-perfil h2
+  {
+    display: block;
+    margin: 1em 0em 0em 0em;
+    font-size: 1.5em;
+  }
+
+  #tres-perfiles .titulo-perfil .subtitulo-perfil
+  {
+    display: block;
+    padding-top: 0.30em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  #tres-perfiles .icon
+  {
+    position: relative;
+    display: block;
+    margin: 0px auto 0.80em auto;
+    background: none;
+    line-height: 150px;
+    font-size: 4em;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 6px solid #67128F;
+    text-align: center;
+    color: #FFF;
+
+  }
+
+  #tres-perfiles #perfil1,
+  #tres-perfiles #perfil2
+  {
+    float: left;
+    width: 30%;
+    height: 700px;
+  }
+
+  #tres-perfiles #perfil1
+  {
+    margin-right: 5%;
+  }
+
+  #tres-perfiles #perfil3
+  {
+    float: right;
+    width: 30%;
+  }
+
+  #tres-perfiles .titulo-perfil
+  {
+    text-align: center;
+  }
+
+  #tres-perfiles .titulo-perfil h2
+  {
+    font-size: 1.60em;
+  }
+
+  #tres-perfiles .titulo-perfil .subtitulo-perfil
+  {
+    padding-top: 0.50em;
+    font-size: 0.90em;
+    color: #858585;
+  }
+
+  #tres-perfiles .arrow-down
+  {
+    border-top-color: #292929;
+  }
+  img.imagen-perfil{
+  width: 95%;
+  height: 300px;
+  }
+  #tres-perfiles p.descripcion-perfil
+	{
+    height: 5rem;
+		 color = var(--gris-claro-texto);
+	}
+
+
+/*ESTILO DEL FOOTER*/
+.footer-profile-wrapper
+{
+  overflow: hidden;
+  padding: 0em 0em 5em 0em;
+  margin-top: 2rem;
+  background: transparent;
+}
+/* p grandchild or further of footer*/
+footer * strong {
+  font-weight: 900;
+}
+footer * h1 {
+  font-size: 1.1rem ;
+  height: 50px;
+}
+footer * h2 {
+  font-size: 0.2rem ;
+  height: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+footer * h4 {
+  font-size: 1.4rem ;
+}
+footer * h5 {
+  font-size: 1.2rem !important;
+}
+footer * h6 {
+  font-size: 1rem !important;
+}
+footer * p {
+  font-size: 1rem !important;
+  height: 3.5rem;
+}
+
+footer * select {
+  font-size: 1.4rem !important;
+  background-color: #ffe8d4;
+  color: #45062e;
+}
+
+footer * select :hover {
+  font-size: 1.4rem !important;
+  background-color: #7f055f;
+  color: #e5a4cb;
+}
+footer * button {
+  font-size: 1.4rem  !important;
+  background-color: #7f055f;
+  color: #e5a4cb;
+}
+
+footer * h1,
+.h1
+{
+  /*font-family:  'Source Sans Pro', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;*/
+  font-family:  'Montserrat-SemiBold', 'sans-serif' !important;
+  color: var(--c-letra-oscuro) ;
+}
+footer .title h2
+{
+  /*font-family:  'Source Sans Pro', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;*/
+  font-family:  'Montserrat-Regular', 'sans-serif' !important;
+  font-weight: lighter;
+  font-size: 1rem;
+  color: var(--gray) ;
+}
+footer * h3, h4, h5, h6,
+{
+  font-family:  'Montserrat-Regular', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
+  color: #45062e !important;
+}
+
+footer * div{
+  font-family:  'Montserrat-Regular', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
+  color: var(--gray);
+  line-height: 1.9;
+
+}

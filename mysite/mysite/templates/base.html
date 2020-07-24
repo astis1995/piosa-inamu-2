@@ -1,4 +1,4 @@
-{% load cms_tags menu_tags sekizai_tags staticfiles %}
+{% load cms_tags menu_tags sekizai_tags static %}
 <!doctype html>
 <html>
     <head>
@@ -12,7 +12,11 @@
 
         <!-- Custom styles for this template -->
         <link href= "{%static "css_bg/modern-business.css" %}" rel="stylesheet" >
-        <link href= "{%static "css_menu/menu.css" %}" rel="stylesheet" >
+      
+
+        <!-- Colores y Estilos particulares del sitio-->
+        <link href= "{%static "sitio/styles.css" %}" rel="stylesheet">
+        <link href= "{% static "css_menu/menu.css" %}"  rel="stylesheet" type="text/css" media="all" />
 
         {% endblock css_style%}
 
@@ -42,13 +46,12 @@
     </head>
     <body>
         {% cms_toolbar %}
-        <div class="container modfont">
+
 
                 {% show_menu 0 0 1 2%}
                 {# show_sub_menu 1 None 1 "menu/submenu.html" #}
                 {# show_breadcrumb #}
             {%block content %}{% endblock content %}
-        </div>
 
       <footer>
       {% static_placeholder 'footer' %}

@@ -872,6 +872,7 @@ class PersonaModel(models.Model):
     cedula_fisica                   = models.CharField(max_length=10,blank=True)
     nombre_emprendimiento           = models.CharField(max_length =140,blank=True)
     imagen_emprendimiento           = models.ImageField(blank=True)
+    foto_de_perfil                  = models.ImageField(blank=True)
     persona_indigena                = models.BooleanField(default = False,blank=True)
     formal                          = models.BooleanField(default = False,blank=True)
     cedula_juridica                 = models.CharField(max_length = 140,blank=True)
@@ -895,7 +896,7 @@ class PersonaModel(models.Model):
     rrss_link                       = models.CharField(max_length=140,blank=True)
     rrss_link_2                     = models.CharField(max_length=140,blank=True)
     comentarios                     = models.CharField(max_length=1500,blank=True)
-
+    url_interna                     = models.CharField(max_length=1500,blank=True)
 
     def __str__(self):
         return self.nombre
