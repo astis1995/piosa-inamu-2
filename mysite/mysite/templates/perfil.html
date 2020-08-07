@@ -1,0 +1,176 @@
+{% load cms_tags menu_tags sekizai_tags static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% page_attribute "page_title" %}{% endblock title %}</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href= "{%static "sitio/styles.css" %}"        rel="stylesheet">
+    <link href= "{%static "sitio/perfiles-style.css" %}" rel="stylesheet">
+    <link href= "{%static "css/styles.css" %}" rel="stylesheet">
+    <link href= "{% static "css_menu/menu.css" %}"  rel="stylesheet" type="text/css" media="all" />
+
+    {% render_block "css" %}
+  </head>
+  <body>
+    {% cms_toolbar %}
+
+    <header>
+      {% show_menu 0 0 1 2 "menu/boot2/menu3.html" %}
+      {# show_sub_menu 1 None 1 "menu/submenu.html" #}
+      {# show_breadcrumb #}
+    </header>
+
+      <main>
+          {%block content %}
+
+          <article>
+                <div class="container-fluid">
+
+              	<div class="row">
+              		<div class="col-md-12 titulo-pagina">
+              			<h1>
+              				Alianzas y Trueques entre Mujeres.
+              			</h1>
+              		</div>
+              	</div>
+
+              {% for perfil in perfiles %}
+
+              	<div class="row ">
+              		<div class="col-md-4 ">
+
+                      <div class="nombre-persona">
+                        <h2>
+                				{{perfil.nombre}}
+                        <h2>
+
+                      <div class="canton">
+                        <h3>
+                  			{{perfil.canton}}
+                        </h3>
+                      </div>
+
+                    </div>
+                  </div>
+
+              		<div class="col-md-8">
+              		</div>
+              	</div>
+              	<div class="row imagenes">
+              		<div class="col-md-4  foto-perfil ">
+              			<img class="foto-perfil" alt="Foto de perfil no encontrada" src="{{prefijo}}{{perfil.foto_de_perfil}}">
+                    {{prefijo}}{{persona.foto_de_perfil}}
+              		</div>
+              		<div class="col-md-8 foto-emprendimiento">
+              			<!--img class="foto-emprendimiento" alt="Imagen de emprendimiento no encontrada" src="{{prefijo}}{{perfil.imagen_emprendimiento}}"-->
+              		</div>
+              	</div>
+                <div class="contenedor-titulo-bio">
+
+                <div class="row">
+              		<div class="col-md-12 titulo-emprendimiento">
+                    <h3> {{perfil.nombre_emprendimiento}}</h3>
+              		</div>
+              	</div>
+
+                <div class="row ">
+
+                  <div class="col-md-12 biografia">
+                    <p> {{perfil.biografia}} </p>
+                  </div>
+                </div>
+
+              </div>
+
+              	<div class="row imagenes-emprendimiento-3col">
+              		<div class="col-md-4 foto-producto responsive">
+              			<img alt="Imagen de producto no encontrada" src="{{prefijo}}{{perfil.foto_producto1}}">
+              		</div>
+              		<div class="col-md-4 foto-producto responsive">
+              			<img alt="Imagen de producto no encontrada" src="{{prefijo}}{{perfil.foto_producto2}}">
+              		</div>
+              		<div class="col-md-4 foto-producto responsive">
+              			<img alt="Imagen de producto no encontrada" src="{{prefijo}}{{perfil.foto_producto3}}">
+              		</div>
+              	</div>
+
+                <div class="row info-emprendimiento-3col">
+                  <div class="col-md-4">
+                    <div class="horario">
+                      <h3>
+                      Horario de atención:
+                      </h3>
+                      <p>
+                      {{perfil.horario_contacto}}
+                    </p>
+                    </div>
+
+                    <div class="informacion-negocio">
+                      <h3>
+                      {% if perfil.trueque %}
+                      {% if perfil.a_domicilio %}
+                      {% if perfil.trueque %}
+                      Información del Negocio:
+                      {% endif %}
+                      {% endif %}
+                      {% endif %}
+                      </h3>
+                      <p class="trueque">
+                        {% if perfil.trueque %}
+                        Realiza trueque.
+                        {% endif %}
+                      </p>
+                      <p class="a-domicilio">
+                        {% if perfil.a_domicilio %}
+                        Realiza entregas a domicilio.
+                        {% endif %}
+                      </p>
+                      </div>
+                  </div>
+
+
+                  {% if perfil.a_domicilio %}
+
+                  <div class="col-md-4">
+                    <div class="cantones-de-atencion">
+                      <h3>
+                      Atiende en:
+                      </h3>
+                      <p>
+                      {{perfil.a_domicilio_cantones}}
+                    </p>
+                    </div>
+                    {% endif %}
+                  </div>
+                  <div class="col-md-4">
+
+                  </div>
+                </div>
+
+              </div>   <!-- fin contenedor fluido -->
+
+                {% endfor %}
+
+          </article>
+        </main>
+
+    {% endblock content %}
+    <footer>
+    {% static_placeholder 'footer' %}
+    </footer>
+
+    <script src="xjs/jquery.min.js"></script>
+    <script src="xjs/bootstrap.min.js"></script>
+    <script src="xjs/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>   <!--importante-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>  <!--importante-->
+
+  </body>
+</html>

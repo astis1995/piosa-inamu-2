@@ -1,7 +1,7 @@
 {% load cms_tags menu_tags sekizai_tags static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!-- Perfiles Busqueda-->
-<!--
+<!-- temp_pic/index.html
 Design by TEMPLATED
 http://templated.co
 Released for free under the Creative Commons Attribution License
@@ -36,24 +36,31 @@ Released   : 20131223
 <body>
 
 {% cms_toolbar %}
+
 {%block content %}
-<div id="header-wrapper">
+<div id="menu-wrapper">
 
 
-		{% show_menu 0 0 1 2 "menu/boot2/menu2.html" %}
+		{% show_menu 0 0 1 2 "menu/boot2/menu3.html" %}
 		{# show_sub_menu 1 None 1 "menu/submenu.html" #}
 		{# show_breadcrumb #}
 
-</div><!--fin header wrapper-->
-<div class="contenido"><!--debe ir justo después de header wrapper-->
+</div><!--fin menu wrapper-->
+
+<main>
+
+<!--TODO hacer una plantilla de headerr-->
+<header>
   <div class="logo">
   			{% placeholder logo %}
   </div><!--fin title-container-->
 
-<div class="title-container">
+<hgroup class="main-title">
 			<h1>{% placeholder titulo %}</h1>
-			<h1>{% placeholder subtitulo %}</h1>
-</div><!--fin title-container-->
+			<h2>{% placeholder subtitulo %}</h2>
+</hgroup><!--fin title-container-->
+
+</header>
 
 <div id="banner">{% placeholder imagenbanner %}</div>
 
@@ -93,7 +100,7 @@ Released   : 20131223
 
 <div><!--perfiles-->
 
-<div id="perfiles" class="container">
+<div id="perfiles" class="container titulo-seccion">
   <div class="title">
     <h2>{% placeholder tituloPerfiles %}</h2>
   </div>
@@ -110,32 +117,32 @@ Released   : 20131223
     		{% if dict.columna == 0 %}
     			<div id="perfil1">
     				<div class="titulo-perfil">
-    					<img class="imagen-perfil" src="{{prefijomedia}}{{dict.persona.imagen_emprendimiento}}" alt="foto-perfil" width="500" height="600">
+    					<img class="imagen-perfil" src="{{prefijomedia}}{{dict.persona.foto_de_perfil}}" alt="foto-perfil" width="500" height="600">
     					<h2>{{dict.persona.nombre}}</h2>
               <span class="subtitulo-perfil"> {{dict.persona.nombre_emprendimiento}} </span>
     				</div>
-    				<p class="descripcion-perfil">{{dict.persona.comentarios}}</p>
-    				<a href="{{dict.persona.link}}" class="button">Ver más</a>
+    				<!--p class="descripcion-perfil">{{dict.persona.biografia}}</p-->
+    				<a href="/busqueda/{{dict.persona.pk}}" class="button">Ver más</a>
     			</div>
     		{% elif dict.columna == 1 %}
     		<div id="perfil2">
     			<div class="titulo-perfil">
-    				<img class="imagen-perfil" src="{{prefijomedia}}{{dict.persona.imagen_emprendimiento}}" alt="foto-perfil" width="500" height="600">
+    				<img class="imagen-perfil" src="{{prefijomedia}}{{dict.persona.foto_de_perfil}}" alt="foto-perfil" width="500" height="600">
     				<h2>{{dict.persona.nombre}}</h2>
     				<span class="subtitulo-perfil"> {{dict.persona.nombre_emprendimiento}} </span>
     			</div>
-    			<p class="descripcion-perfil">{{dict.persona.comentarios}}</p>
-    			<a href="{{dict.persona.link}}" class="button">Ver más</a>
+    			<!--p class="descripcion-perfil">{{dict.persona.biografia}}</p-->
+    			<a href="/busqueda/{{dict.persona.pk}}" class="button">Ver más</a>
     		</div>
     		{% elif dict.columna == 2 %}
     		<div id="perfil3">
     			<div class="titulo-perfil">
-    				<img class="imagen-perfil" src="{{prefijomedia}}{{dict.persona.imagen_emprendimiento}}" alt="foto-perfil" width="500" height="600">
+    				<img class="imagen-perfil" src="{{prefijomedia}}{{dict.persona.foto_de_perfil}}" alt="foto-perfil" width="500" height="600">
     				<h2>{{dict.persona.nombre}}</h2>
     				<span class="subtitulo-perfil"> {{dict.persona.nombre_emprendimiento}} </span>
     			</div>
-    			<p class="descripcion-perfil">{{dict.persona.comentarios}}</p>
-    			<a href="{{dict.persona.link}}" class="button">Ver más</a>
+    			<!--p class="descripcion-perfil">{{dict.persona.biografia}}</p-->
+    			<a href="/busqueda/{{dict.persona.pk}}" class="button">Ver más</a>
     		</div>
     		{% endif %}
     	{% endfor %}
@@ -159,7 +166,8 @@ Released   : 20131223
 </div>
 {% endcomment %}
 
-</div><!-- fin del contenido de la página, debe ir junto a footer-->
+
+</main>
 <footer>
 
 <div><!--Footer eie-->

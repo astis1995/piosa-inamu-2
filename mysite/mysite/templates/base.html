@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <title>{% block title %}{% page_attribute "page_title" %}{% endblock title %}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
         {% block css_style%}
@@ -12,7 +12,7 @@
 
         <!-- Custom styles for this template -->
         <link href= "{%static "css_bg/modern-business.css" %}" rel="stylesheet" >
-      
+
 
         <!-- Colores y Estilos particulares del sitio-->
         <link href= "{%static "sitio/styles.css" %}" rel="stylesheet">
@@ -48,7 +48,7 @@
         {% cms_toolbar %}
 
 
-                {% show_menu 0 0 1 2%}
+                {% show_menu 0 0 1 2 "menu/boot2/menu2.html" %}
                 {# show_sub_menu 1 None 1 "menu/submenu.html" #}
                 {# show_breadcrumb #}
             {%block content %}{% endblock content %}

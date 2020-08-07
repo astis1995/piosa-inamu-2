@@ -43,17 +43,6 @@ def creador_matriz_dict_personas(personas):
     #Ahora se leerá el resultado
     return list2
 
-    #fila_n = 0
-    #columna = 0
-
-    #for fila in list2:
-    #    print("Fila")
-    #    print(fila_n)
-    #    for columna in fila:
-    #        print(columna["persona"])
-    #        print(columna["fila"])
-    #        print(columna["columna"])
-    #    fila_n= fila_n + 1
 
 def is_404(personas):
     if len(personas) == 0:
@@ -65,9 +54,39 @@ def Busqueda_view(request):
     elementos = request.GET.lists()
 
     return HttpResponse('<h1> Hola Sirvió la vara: Lugar: ' + lugar +" Actividad: "+ actividad+ '</h1>')
-# Create your views here.
 
-def perfiles_view(request):
+def prueba_pk(request, pk ):
+    ModeloPersonas = apps.get_model('personas', 'PersonaModel')
+    perfiles = ModeloPersonas.objects.all().filter(pk = pk)
+    HTML_TEMPLATE = "perfil.html" # invitacion_busqueda.html
+    UBICACION_MEDIA = "../../media/"
+    return render(request, HTML_TEMPLATE, {"perfiles": perfiles, "prefijo": UBICACION_MEDIA})
+
+
+def perfiles_view_linear(request, pk):
+    #Determinar lugar y Persona
+    #HTML_TEMPLATE_INVITACION = "boot2/invitacion_busqueda.html" # invitacion_busqueda.html
+    HTML_TEMPLATE = "perfil.html" # invitacion_busqueda.html
+    HTML_TEMPLATE_404 = "404-carrusel.html" #
+    UBICACION_MEDIA = "../../media/"
+    datos = 'Esto es una prueba'
+
+
+
+    #Se carga el modelo de personas y lo filtra por pk
+    ModeloPersonas = apps.get_model('personas', 'PersonaModel')
+    perfiles = ModeloPersonas.objects.all().filter(pk = pk)
+
+    #Si no se solicita ningún perfil se muestra una pagina de error
+    if perfiles is None:
+        return render(request, HTML_TEMPLATE_404)
+        
+    #Convierte el QuerySet a lista
+
+    return render(request, HTML_TEMPLATE, {"perfiles": perfiles, "prefijo": UBICACION_MEDIA})
+
+
+def perfiles_view_matrix(request):
     #Determinar lugar y Persona
     #HTML_TEMPLATE_INVITACION = "boot2/invitacion_busqueda.html" # invitacion_busqueda.html
     HTML_TEMPLATE = "temp_pic/index.html" # invitacion_busqueda.html

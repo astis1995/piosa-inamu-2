@@ -14,5 +14,4 @@ from . import views
 urlpatterns = [
 #url('', views.home_view, name = 'home'),  # NOQ
 #url('', views.busqueda_persona, name = 'busqueda'),  # NOQ
-
 ]

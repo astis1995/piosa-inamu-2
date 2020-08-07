@@ -869,35 +869,47 @@ class PersonaModel(models.Model):
 )
 
     nombre                          = models.CharField(max_length=140)
-    cedula_fisica                   = models.CharField(max_length=10,blank=True)
-    nombre_emprendimiento           = models.CharField(max_length =140,blank=True)
-    imagen_emprendimiento           = models.ImageField(blank=True)
     foto_de_perfil                  = models.ImageField(blank=True)
+    cedula_fisica                   = models.CharField(max_length=10,blank=True)
     persona_indigena                = models.BooleanField(default = False,blank=True)
-    formal                          = models.BooleanField(default = False,blank=True)
-    cedula_juridica                 = models.CharField(max_length = 140,blank=True)
+    biografia                       = models.CharField(max_length=1500,blank=True)
+
+
+    nombre_emprendimiento           = models.CharField(max_length =140,blank=True)
     actividad                       = models.CharField(max_length =140,blank=True,choices = ACTIVIDADES) #Puede ser multioption
+    imagen_emprendimiento           = models.ImageField(blank=True)
+    cedula_juridica                 = models.CharField(max_length = 140,blank=True)
+    formal                          = models.BooleanField(default = False,blank=True)
+    descripcion_emprendimiento      = models.CharField(max_length=1500,blank=True)
 
     nombre_producto                 = models.CharField(max_length = 140,blank=True)
     trueque                         = models.BooleanField(default=False)
+    foto_producto1                 = models.ImageField(blank=True) #TODO hacer relación con una nueva base de datos con fotos de productos.
+    foto_producto2                 = models.ImageField(blank=True) #TODO hacer relación con una nueva base de datos con fotos de productos.
+    foto_producto3                 = models.ImageField(blank=True) #TODO hacer relación con una nueva base de datos con fotos de productos.
+
     telefono                        = models.CharField(max_length = 8,blank=True)
     email                           = models.CharField(max_length =140,blank=True)
     preferencia_contacto            = models.CharField(max_length =140,blank=True, choices = PREFERENCIAS_CONTACTO)
 
     horario_contacto                = models.CharField(max_length = 140,blank=True)
+
     provincia                       = models.CharField(max_length=10, choices=PROVINCIAS,blank=True)
     canton                          = models.CharField(max_length = 140, choices =  CANTONES,blank=True)
     distrito                        = models.CharField(max_length = 140, choices = DISTRITOS,blank=True)
     direccion                      = models.CharField(max_length=140,blank=True)
     a_domicilio                     = models.BooleanField(default=False,blank=True)
     a_domicilio_cantones            = models.CharField(max_length = 140, choices = CANTONES,blank=True) #MULTICHOICE
-    fotos_productos                 = models.ImageField(blank=True)
+
+
     sitio_web                       = models.CharField(max_length=140,blank=True)
     rrss_link                       = models.CharField(max_length=140,blank=True)
     rrss_link_2                     = models.CharField(max_length=140,blank=True)
     comentarios                     = models.CharField(max_length=1500,blank=True)
-    url_interna                     = models.CharField(max_length=1500,blank=True)
 
+
+    #url_interna                     = models.CharField(max_length=1500,blank=True)
+    #TODO añadir campo para biografía y descripcion del emprendimiento.
     def __str__(self):
         return self.nombre
 # Create your models here.

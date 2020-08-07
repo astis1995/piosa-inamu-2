@@ -1,0 +1,68 @@
+/*Estilos relevantes para la página de perfiles*/
+
+body,h1,h2,h3,h4,h5,h6{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.container-fluid{
+  padding: 0px;
+}
+div.titulo-pagina {
+  margin-top: 1rem !important;
+}
+div.nombre-persona {
+  margin-top: 1.5rem !important;
+}
+div.canton {
+  margin-top: 1rem !important;
+}
+
+div.imagenes{
+  margin-top: 1.5rem !important;
+}
+div.foto-perfil {
+  overflow: hidden;
+  width = 30%;
+  max-height: 320px; //Esto se debe acordar con el INAMU
+}
+
+div.foto-emprendimiento {
+  overflow: hidden;
+}
+
+div.titulo-emprendimiento{
+  margin-top: 1.5rem !important;
+}
+
+div.imagenes-emprendimiento-3col{
+  margin-top: 1.5rem !important;
+}
+div.imagenes-emprendimiento-3col div{
+ max-width: 30%;
+}
+div.contenedor-titulo-bio{
+  background-color: #ebd2be !important;
+}
+div.titulo-emprendimiento{
+  margin-top: 1.5rem !important;
+}
+div.biografia{
+  margin-top: 1.5rem !important;
+}
+
+div.foto-producto {
+  width: 100% !important;
+  height: 40rem !important;
+  overflow: hidden !important;
+ max-height: 600px; //Esto se debe acordar con el INAMU
+}
+
+
+/*rows*/
+.row{
+margin-right:-15px;margin-left:-15px
+}

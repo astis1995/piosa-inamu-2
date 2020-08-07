@@ -228,6 +228,7 @@ CMS_TEMPLATES = (
     ('boot2/paginabusqueda.html', 'boot2'),
     ('temp_pic/index.html', 'temp_pic'),
     ('iniciar.html', 'iniciar prueba'),
+    ('perfil.html', 'Perfil'),
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'

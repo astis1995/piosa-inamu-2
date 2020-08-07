@@ -24,7 +24,8 @@ urlpatterns += i18n_patterns(
     #url(r'^polls/', include('polls.urls', namespace="polls")), #se quita por el apphook
     #url('en/', include('busqueda.urls')),
     #url(r'^busqueda/', include('busqueda.urls')),
-    url('inicio/', include('perfiles.urls'), name = "perfiles"),
+    url('busqueda/', include('perfiles.urls'), name = "perfiles"),
+    url('inicio/', include('perfiles.urls'), name = "perfiles_inicio"),
     #url(r'', views.home_view, name = 'home' ),
     url(r'^', include('cms.urls')),
 )

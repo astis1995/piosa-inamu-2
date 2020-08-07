@@ -11,7 +11,8 @@
 
 {% for child in children %}
 <li class="child{% if child.selected %} selected{% endif %}{% if child.ancestor %} ancestor{% endif %}{% if child.sibling %} sibling{% endif %}{% if child.descendant %} descendant{% endif %}">
-	<a class="big-font-menu" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+
+  <a class="big-font-menu" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
 	{% if child.children %}
 	<ul >
 		{% show_menu from_level to_level extra_inactive extra_active template "" "" child %}

@@ -1,3 +1,4 @@
+/*BORRAR*/
 /*Aqui  van elementos particulares del sitio web
 Colores, tipos de letra, tamaños, todas aquellas cosas
 que se deban cambiar constantemente
@@ -14,7 +15,6 @@ body {
   margin: 0 ;
   background-color: #ebd2be !important;
   padding:auto;
-  margin-right: -50px
 }
 :root {
   --blue: #007bff;
@@ -60,29 +60,29 @@ body {
 @font-face {
  font-family: 'Proxima Nova Soft';
  src: local('Proxima-Nova-Soft'),
-      url('../fonts/Proxima-Nova-Soft.ttf') format("truetype");
+      url('../../static/fonts/Proxima-Nova-Soft.ttf') format("truetype");
 }
 @font-face {
  font-family: 'Montserrat-SemiBold';
  src: local('Montserrat-SemiBold'),
-      url('../fonts/Montserrat-SemiBold.ttf') format("truetype");
+      url('../../static/fonts/Montserrat-SemiBold.ttf') format("truetype");
 }
 @font-face {
  font-family: 'Montserrat-Regular';
  src: local('Montserrat-Regular'),
-      url('../fonts/Montserrat-Regular.ttf') format("truetype");
+      url('../../static/fonts/Montserrat-Regular.ttf') format("truetype");
 }
 
 @font-face {
 font-family: 'Fira Sans Extra Condensed Regular';
 src: local('FiraSansExtraCondensed-Regular'),
-     url('../fonts/FiraSansExtraCondensed-Regular.ttf') format("truetype");
+     url('../../static/fonts/FiraSansExtraCondensed-Regular.ttf') format("truetype");
 }
 
 @font-face {
 font-family: 'Source Sans Pro';
 src: local('SourceSansPro-Regular'),
-     url('../fonts/SourceSansPro-SemiBold.ttf') format("truetype");
+     url('../../static/fonts/SourceSansPro-SemiBold.ttf') format("truetype");
 }
 
 
@@ -93,68 +93,63 @@ src: local('SourceSansPro-Regular'),
 }
 
 /*ESTILO DEL CONTENIDO DE LA PAGINA*/
-main article{
-  margin-left: 1rem;
+
+
+.contenido h1 {
+  font-size: 2.8rem ;
 }
-main header hgroup  h1 {
-  font-size: 2.4rem ;
-}
-main article  h2 {
+.contenido h2 {
   font-size: 2.3rem ;
-  margin-top: 3rem;   /*Esto debe ir en el div para el elemento y no en el elemento en sí*/
-  margin-bottom: 1rem;  /*Esto debe ir en el div para el elemento y no en el elemento en sí*/
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
-main article  h3 {
+.contenido h3 {
   font-size: 1.9rem ;
 }
-main article  h4 {
+.contenido h4 {
   font-size: 1.4rem ;
 }
-main article  h5 {
+.contenido h5 {
   font-size: 1.2rem !important;
 }
-main article  h6 {
+.contenido h6 {
   font-size: 1rem !important;
 }
 
-main article  select {
+.contenido select {
   font-size: 1.4rem !important;
   background-color: #ffe8d4;
   color: #45062e;
 }
 
-main article  select :hover {
+.contenido select :hover {
   font-size: 1.4rem !important;
   background-color: #7f055f;
   color: #e5a4cb;
 }
-main article  button {
+.contenido button {
   font-size: 1.4rem  !important;
   background-color: #7f055f;
   color: #e5a4cb;
 }
 
-main h1,h2,h3
+.contenido h1, h2
 {
   /*font-family:  'Source Sans Pro', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;*/
   font-family:  'Montserrat-Regular', 'sans-serif' ;
   color: var(--c-letra-oscuro) ;
   font-weight: 100 !important;
 }
-main article  h3, h4, h5, h6,
+.contenido h3, h4, h5, h6,
 {
   font-family:  'Montserrat-Regular', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
   color: #45062e !important;
 }
 
-main article  div{
+.contenido div{
   font-family:  'Montserrat-Regular', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
   color: var(--morado-oscuro);
   line-height: 1.9;
-}
-
-article{
-
 }
 #copyright p
 {
@@ -162,7 +157,7 @@ article{
   font-size: 0.90em;
   color: var(--vino)
 }
-main article  h2 > span {
+.contenido h2 > span {
   font-family:  'Montserrat-Regular', 'sans-serif' !important;
   color: var(--c-letra-oscuro) !important ;
 }
@@ -171,40 +166,27 @@ main article  h2 > span {
   background-color: #1abc9c; /* Para que funcione el toolbar, no cambiar*/
 }
 
-
-
-
-
-header hgroup{
-  float: right;
-  display: inline-block;
+.title-container, .logo{
   margin-top: 6rem;
-  text-align: center;
-  width: 75%
+  margin-bottom: 1rem;
 }
-header hgroup h1{
-  margin-top: 1rem;
+.title-container{
+  float: right;
+  margin-right: 1rem;
+  width: 75%;
 }
-header hgroup h2{
-  margin-top: 2rem;
-}
-div.logo
+.logo
 {
   float: left;
-  width: 25%;
-  margin: auto;
-}
-div.logo img{
-  margin-left: 30%;
-  margin-right: 10%;
-  margin-top: 20%;
-  margin-bottom: 5%;
+  width: 15%;
+  line-height: 1rem;
+  margin-left: 6rem;
 }
 
 a :not(cms-toolbar) :hover {
-  color: white !important;
-  // text-decoration: underline;
-  //background-color: #ffe8d4;
+  color: #7f055f !important;
+  text-decoration: underline;
+  background-color: #ffe8d4;
 }
 ul.modfont li a {
   font-family:   'Montserrat-Regular', 'Source Sans Pro', 'Fira Sans Extra Condensed Regular','Helvetica','Arial', sans-serif  !important;
@@ -325,7 +307,7 @@ p.fuente-boton {
 	.container
 	{
 		margin: 0px auto;
-		width: auto; /**/
+		width: 1200px;
 	}
 
 /*CSS SELECT ##########################################################*/
@@ -572,13 +554,7 @@ option :checked{
   #perfiles
   {
     overflow: hidden;
-    padding: 2rem 0rem;
-  }
-
-  #perfiles.titulo-seccion
-  {
-    overflow: hidden;
-     height: 2rem;
+    padding: 4em 0em;
   }
 
   #perfiles .titulo-perfil
@@ -752,22 +728,4 @@ footer * div{
   color: var(--gray);
   line-height: 1.9;
 
-}
-
-/* Navbar style*/
-div.navbar div.container{
-  width:100%;
-}
-.navbar{
-  background-color: var(--morado-oscuro);
-  word-break:normal;
-  display: flex;
-  padding-right: 6rem;
-}
-span.text-warning{
-  display: flex;
-  flex-wrap: wrap;
-}
-a.navbar-brand {
-flex-wrap: wrap;
 }
